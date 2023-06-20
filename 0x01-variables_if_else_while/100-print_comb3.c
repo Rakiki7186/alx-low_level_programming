@@ -6,21 +6,30 @@
 */
 int main(void)
 {
-int tens;
-int ones;
-for (tens = 0; tens <= 9; tens++)
+int i = '0';
+int j = '0';
+while (i <= '9')
 {
-for (ones = tens + 1; ones <= 9; ones++)
+while (j <= '9')
 {
-putchar(tens + '0');
-putchar(ones + '0');
-if (tens < 😍
+if (!(i > j) || i == j)
+{	
+putchar(i);
+putchar(j);
+if (i == '8' && j == '9')
+{
+putchar('\n');
+}
+else
 {
 putchar(',');
 putchar(' ');
 }
 }
+j++;
 }
-putchar('\n');
+j = '0';
+i++;
+}
 return (0);
 }
