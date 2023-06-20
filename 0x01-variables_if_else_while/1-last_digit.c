@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main	- Entery point of the program
- * Return: Always 0 (success)
+ * main	- Entry point of the program
+ * Return: 0
  */
 int main(void)
 {
@@ -18,6 +18,6 @@ printf(" and is greater than 5\n");
 else if (lastDigit == 0)
 printf(" and is 0\n");
 else
-printf(" and is lessthan 6 and not 0\n");	
+printf(" and is less than 6 and not 0\n");	
 return (0);
 }
