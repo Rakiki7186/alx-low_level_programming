@@ -8,13 +8,13 @@ int main(void)
 {
 long int number;
 number = 612852475143;
-if (isPrime(number) == 1)
+if (number == 1)
 {
 printf("%ld\n", number);
 }
 else
 {
-printf("%ld\n", biggestFactor(number));
+printf("%d\n", 'int'(number));
 }
 return (0);
 }
@@ -51,7 +51,7 @@ return (1);
  * @a: number to check
  * Return: biggest factor
  */
-long int biggestFactor(long int a)
+long int (long int a)
 {
 long int i, factor;
 factor = a;
