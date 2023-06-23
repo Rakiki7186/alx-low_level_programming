@@ -1,78 +1,38 @@
 #include <stdio.h>
-#include "main.h"
-/**
- * main - prints the biggest prime factor of a number.
- * Return: Always 0.
+#include <math.h>
+ /**
+ * largest_prime_factor - Finds the largest prime factor of a number.
+ * @n: The number to find the largest prime factor of.
+ * Return: The largest prime factor of the number.
  */
+long largest_prime_factor(long n)
+{
+long largest_factor = -1;
+long i;
+if (n <= 1)
+return (largest_factor);
+while (n % 2 == 0)
+{
+largest_factor = 2;
+n /= 2;
+}
+for (i = 3; i <= sqrt(n); i += 2)
+{
+while (n % i == 0)
+{
+largest_factor = i;
+n /= i;
+}
+}
+}
+if (n > 2)
+largest_factor = n;
+return (largest_factor);
+}
 int main(void)
 {
-long int number;
-number = 612852475143;
-if (number == 1)
-{
-printf("%ld\n", number);
-}
-else
-{
-printf("%d\n", 'int'(number));
-}
+long number = 612852475143;
+long largest_factor = largest_prime_factor(number);
+printf("%ld\n", largest_factor);
 return (0);
-}
-/**
- * isPrime - analise if a number is prime or not
- * @n: number to check
- * Return: true if it is prime false if not
- */
-int isPrime(long int n)
-{
-int i;
-if (n <= 1)
-{
-return (0);
-}
-else if (n == 2)
-{
-return (1);
-}
-else
-{
-for (i = 2; i < n; i++)
-{
-if (n % i == 0)
-{
-return (0);
-}
-}
-return (1);
-}
-}
-/**
- * biggestFactor - returns the biggest prime factor of a number
- * @a: number to check
- * Return: biggest factor
- */
-long int (long int a)
-{
-long int i, factor;
-factor = a;
-for (i = 2; i <= factor; i++)
-{
-if (isPrime(factor) == 1)
-{
-break;
-}
-else
-{
-if ((factor % i == 0) && (isPrime(i) == 1))
-{
-factor = factor / i;
-continue;
-}
-else
-{
-factor = factor;
-}
-}
-}
-return (factor);
 }
