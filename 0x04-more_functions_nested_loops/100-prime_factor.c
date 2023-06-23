@@ -24,7 +24,6 @@ largest_factor = i;
 n /= i;
 }
 }
-}
 if (n > 2)
 largest_factor = n;
 return (largest_factor);
